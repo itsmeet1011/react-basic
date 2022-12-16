@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "bulma/css/bulma.css";
+// in case of import css we do not need to add as a veriavle that why import like this
+import ProfileCard from "./profile";
+import AlexaImg from "./images/alexa.png";
+import CortanaImg from "./images/cortana.png";
+import SiriImg from "./images/siri.png";
+// import with relative adderes and with file extainsation name
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>Personal profile cards</div>
+
+      <div style={{ display: "flex", gap: "50px" }}>
+        <ProfileCard title="alexa" handel="@alexa32" img={AlexaImg} />
+        <ProfileCard title="catana" handel="@catana92" img={CortanaImg} />
+        <ProfileCard title="siri" handel="@sir32" img={SiriImg} />
+      </div>
     </div>
   );
 }
